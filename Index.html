@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="main.css" rel="stylesheet">
+    <title>Pizza Shop</title>
+</head>
+
+<body>
+    <div>
+        <h1>Welcome to Sprad's Vegan Pizza Shop</h1>
+        <h3>Please make a pizza:</h3>
+        <label for="pizza">Choose one from each section</label>
+        <div id="pizzaTopping">
+            <p id="result"></p>
+            <select>
+                <option value="cheese">Cheese</option>
+            </select>
+            <select>
+                <option value="Bell Pepper">Bell Pepper</option>
+                <option value="Spinach">Spinach</option>
+                <option value="Mushroom">Mushroom</option>
+                <option value="Black Olives">Black Olives</option>
+                <option value="Tomatoes">Tomatoes</option>
+            </select>
+            <select>
+                <option value="Chicken">Chicken</option>
+                <option value="Sepperoni">Pepperoni</option>
+                <option value="Sausage">Sausage</option>
+                <option value="Tofu">Tofu</option>
+            </select>
+            <select>
+                <option value="Regular">Regular</option>
+                <option value="Thin">Thin</option>
+                <option value="Deep Dish">Deep Dish</option>
+            </select>
+        </div>
+        <button id="submit">Submit</button>
+        <!--on the sumbit button- pizza goes in 'Your personalized pizza' div -->
+    </div>
+    <!--Pizza that user makes from drop down list goes in this div-->
+    <p>Your personalized pizza</p>
+    <div id="personalized">
+
+    </div>
+
+    <!--Pizza's that I created from the pizza Array goes in this div-->
+    <div>Choose a Pizza</div>
+
+    <div></div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
