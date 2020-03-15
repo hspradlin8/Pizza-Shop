@@ -1,6 +1,6 @@
 
-const makePizza = (cheese, veggie, meat, crust) => {
-    //console.log(`I want a ${cheese} ${veggie} ${meat} ${crust} crust pizza`);
+const makePizza = (cheese, veg, protein, crust) => {
+    //console.log(`I want a ${cheese} ${veg} ${protein} ${crust} crust pizza`);
 }
 
 
@@ -8,65 +8,78 @@ const makePizza = (cheese, veggie, meat, crust) => {
 const pizzaArray = [
     {
         cheese: "Cheese",
-        veggie: "Bell Peppers",
-        meat: "Sausage",
+        veg: "Bell Peppers",
+        protein: "Sausage",
         crust: "Regular"
 
     },
     {
         cheese: "Cheese",
-        veggie: "Bell Peppers",
-        meat: "Sausage",
+        veg: "Bell Peppers",
+        protein: "Sausage",
         crust: "Thin"
 
     },
     {
         cheese: "Cheese",
-        veggie: "Spinach",
-        meat: "Tofu",
+        veg: "Spinach",
+        protein: "Tofu",
         crust: "Regular"
 
     },
     {
         cheese: "Cheese",
-        veggie: "Tomatoes",
-        meat: "Chicken",
+        veg: "Tomatoes",
+        protein: "Chicken",
         crust: "Deep Dish"
 
     },
     {
         cheese: "Cheese",
-        veggie: "Spinach",
-        meat: "Bacon",
+        veg: "Spinach",
+        protein: "Bacon",
         crust: "Thin"
 
     },
 ]
 
 pizzaArray.forEach((pizza) => {
-    makePizza(pizza.cheese, pizza.veggie, pizza.meat, pizza.crust)
+    makePizza(pizza.cheese, pizza.veg, pizza.protein, pizza.crust)
 });
+
+
+// Your personalized pizza //
 
 document.getElementById("submit").addEventListener("click", getPizzaTopping);
 
 
 //change it to where each result is printed to the DOM. 
 function getPizzaTopping() {
-    var p = document.getElementById("pizzaTopping");
+    var p = document.getElementById("cheese");
     var result = p.options[p.selectedIndex].value;
 
-    // var v = document.getElementById("pizzaVeg");
-    // var result = v.options[v.selectedIndex].value;
+    p = document.getElementById("veg");
+    var resultTwo = p.options[p.selectedIndex].value;
 
-    // var m = document.getElementById("pizzaMeat");
-    // var result = m.options[m.selectedIndex].value;
+    p = document.getElementById("protein");
+    var resultThree = p.options[p.selectedIndex].value;
 
-    // var c = document.getElementById("pizzaCrust");
-    // var result = c.options[c.selectedIndex].value;
+    p = document.getElementById("crust");
+    var resultFour = p.options[p.selectedIndex].value;
 
-    document.getElementById("personalized").innerHTML = result;
+    var html = ` 
+    <ul>
+        <h4>Cheese Type:</h4>
+        <p>${result}</p>
+        <h4>Veggie Type:</h4>
+        <p>${resultTwo}</p>
+        <h4>Protein Type:</h4>
+        <p>${resultThree}</p>
+        <h4>Crust Type:</h4>
+        <p>${resultFour}</p>
+    </ul>`
+
+    document.getElementById("personalized").innerHTML = html;
     console.log("Button is clicked");
 }
-
-
 
